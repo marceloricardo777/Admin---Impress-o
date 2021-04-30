@@ -83,6 +83,7 @@ const capitalizeText = (text: string) => {
 const TableList: React.FC<{}> = () => {
   const [createModalVisible, handleModalVisible] = useState<boolean>(false);
   const [updateModalVisible, handleUpdateModalVisible] = useState<boolean>(false);
+
   const [stepFormValues, setStepFormValues] = useState({});
   const actionRef = useRef<ActionType>();
   const [first, setFirst] = useState(true);
@@ -286,7 +287,10 @@ const TableList: React.FC<{}> = () => {
           labelWidth: 180,
         }}
         toolBarRender={() => [
-          <Button type="primary" onClick={() => handleModalVisible(true)}>
+          <Button type="primary" onClick={() => {
+          }
+
+          }>
             <PlusOutlined /> Novo
           </Button>,
         ]}

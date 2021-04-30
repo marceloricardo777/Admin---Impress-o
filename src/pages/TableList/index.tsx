@@ -39,6 +39,7 @@ const TableList: React.FC<{}> = () => {
   const [pages, setPages] = useState(1);
   const [usersList, setUserList] = useState<UserListItemAdmin[]>([]);
   const [row, setRow] = useState<UserListItemAdmin>();
+
   const [selectedRowsState, setSelectedRows] = useState<UserListItemAdmin[]>([]);
   const columns: ProColumns<UserListItemAdmin>[] = [
     {
@@ -147,7 +148,8 @@ const TableList: React.FC<{}> = () => {
         rowKey="key"
         search={false}
         toolBarRender={() => [
-          <Button type="primary" onClick={() => handleModalVisible(true)}>
+          <Button type="primary" onClick={() => {
+          }}>
             <PlusOutlined /> Novo
           </Button>,
         ]}

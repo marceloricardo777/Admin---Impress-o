@@ -12,6 +12,7 @@ import type { UserListItem } from './data.d';
 import { queryUsers, updateRule, addRule, removeRule } from './service';
 import { maskForDate, setKeyOnObjects } from '../../../../globals/globalFunctions';
 import { isLogged, isAdmin } from '../../../../globals/globalFunctions';
+import CreateUser from './components/CreateUser';
 
 if (isLogged() === false) {
   window.location.href = '/user/login';
@@ -94,6 +95,8 @@ const capitalizeText = (text: string) => {
 };
 
 const TableList: React.FC<{}> = () => {
+  const [createUserModalVisible, handleCreateUSerModalVisible] = useState<boolean>(false);
+
   const [createModalVisible, handleModalVisible] = useState<boolean>(false);
   const [updateModalVisible, handleUpdateModalVisible] = useState<boolean>(false);
   const [stepFormValues, setStepFormValues] = useState({});
@@ -214,7 +217,8 @@ const TableList: React.FC<{}> = () => {
           labelWidth: 120,
         }}
         toolBarRender={() => [
-          <Button type="primary" onClick={() => handleModalVisible(true)}>
+          <Button type="primary" onClick={() => handleCreateUSerModalVisible(true)
+          }>
             <PlusOutlined /> Novo
           </Button>,
         ]}
@@ -289,7 +293,16 @@ const TableList: React.FC<{}> = () => {
           values={stepFormValues}
         />
       ) : null}
+      <CreateUser
+        onSubmit={() => {
 
+        }}
+        onCancel={() => {
+          // eslint-disable-next-line @typescript-eslint/dot-notation
+
+        }}
+        updateModalVisible={createUserModalVisible}
+      />
       <Drawer
         width={600}
         visible={!!row}
