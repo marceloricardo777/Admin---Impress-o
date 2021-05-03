@@ -64,86 +64,84 @@ export default defineConfig({
               path: '/',
               redirect: '/user/login',
             },
+            // {
+            //   authority: ['admin'],
+            //   path: '/usersadmin/all',
+            //   icon: 'smile',
+            //   name: 'Alunos',
+            //   component: './TableList',
+            // },
             {
               authority: ['admin'],
-              path: '/usersadmin/all',
-              icon: 'audit',
-              name: 'Usuários do Sistema',
-              component: './TableList',
-            },
-            {
-              authority: ['admin'],
-
-              path: '/users/all',
+              path: '/users/',
               icon: 'smile',
-              name: 'Usuários',
+              name: 'Alunos',
               component: './User/list',
             },
             {
               authority: ['admin'],
-
-              path: '/dashboard/all',
-              icon: 'dashboard',
-              name: 'Dashboard',
-              component: './dashboard/analysis',
-            },
-            {
-              path: '/solicitacoes/',
-              icon: 'send',
-              name: 'Solicitações',
-
-              routes: [
-                {
-                  name: 'Aguardando Pagamento',
-                  path: '/solicitacoes/aguardandopagamento',
-                  component: './profile/basicnotpayment',
-                },
-                {
-                  name: 'Aguardando Documentos',
-                  path: '/solicitacoes/nao-concluidas',
-                  component: './profile/basicnotcompleteupdate',
-                },
-                {
-                  name: 'Aguardando Conferencia',
-                  path: '/solicitacoes/solicitadas',
-                  component: './profile/basic',
-                },
-                {
-                  name: 'Recusadas',
-                  path: '/solicitacoes/recusadas',
-                  component: './profile/basicrecused',
-                },
-                {
-                  name: 'Corrigidas',
-                  path: '/solicitacoes/corrigidas',
-                  component: './profile/basicrevised',
-                },
-              ],
-            },
-
-            {
-              path: '/carteira/',
+              path: '/print-card',
               icon: 'idcard',
-              name: 'Passe Estudantil',
-
-              routes: [
-                {
-                  name: 'Em Confecção',
-                  path: '/carteira/confeccao',
-                  component: './profile/carteira',
-                },
-                {
-                  name: 'Aguardando Retirada',
-                  path: '/carteira/pronta',
-                  component: './profile/carteira',
-                },
-                {
-                  name: 'Entregue',
-                  path: '/carteira/entregue',
-                  component: './profile/carteira',
-                },
-              ],
+              name: 'Impresão de carteira',
+              component: './impressao/impressao_client',
             },
+            // {
+            //   path: '/solicitacoes/',
+            //   icon: 'send',
+            //   name: 'Solicitações',
+
+            //   routes: [
+            //     {
+            //       name: 'Aguardando Pagamento',
+            //       path: '/solicitacoes/aguardandopagamento',
+            //       component: './profile/basicnotpayment',
+            //     },
+            //     {
+            //       name: 'Aguardando Documentos',
+            //       path: '/solicitacoes/nao-concluidas',
+            //       component: './profile/basicnotcompleteupdate',
+            //     },
+            //     {
+            //       name: 'Aguardando Conferencia',
+            //       path: '/solicitacoes/solicitadas',
+            //       component: './profile/basic',
+            //     },
+            //     {
+            //       name: 'Recusadas',
+            //       path: '/solicitacoes/recusadas',
+            //       component: './profile/basicrecused',
+            //     },
+            //     {
+            //       name: 'Corrigidas',
+            //       path: '/solicitacoes/corrigidas',
+            //       component: './profile/basicrevised',
+            //     },
+            //   ],
+            // },
+
+            // {
+            //   path: '/carteira/',
+            //   icon: 'idcard',
+            //   name: 'Passe Estudantil',
+
+            //   routes: [
+            //     {
+            //       name: 'Em Confecção',
+            //       path: '/carteira/confeccao',
+            //       component: './profile/carteira',
+            //     },
+            //     {
+            //       name: 'Aguardando Retirada',
+            //       path: '/carteira/pronta',
+            //       component: './profile/carteira',
+            //     },
+            //     {
+            //       name: 'Entregue',
+            //       path: '/carteira/entregue',
+            //       component: './profile/carteira',
+            //     },
+            //   ],
+            // },
             {
               component: '404',
             },
