@@ -1,5 +1,6 @@
 import request from 'umi-request';
 import type { TableListParams } from './data.d';
+import axios from 'axios';
 
 const URL_API = process.env.UMI_APP_HOST;
 const token = `Bearer ${localStorage.getItem('token')}`;
@@ -51,4 +52,7 @@ export async function updateRule(params: TableListParams) {
       method: 'update',
     },
   });
+}
+export async function getCepData(cepvalue: string) {
+  return await axios.get(`https://viacep.com.br/ws/${cepvalue}/json/`)
 }
