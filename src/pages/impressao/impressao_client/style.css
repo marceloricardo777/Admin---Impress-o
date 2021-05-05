@@ -1,0 +1,204 @@
+.border_black {
+    border: 1px solid black;
+    height: 16px;
+}
+
+.align_center {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.title {
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.card_example {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    max-width: 400px;
+    height: 250px;
+    max-height: 250px;
+    padding: 10px 10px 0px 10px;
+    background-image: url('./images/fundo_carteira_unidas.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.308);
+}
+
+.title_card {
+    margin: 0px !important;
+    padding: 0px !important;
+    font-size: 8px;
+    font-weight: bold;
+    color: #373435;
+}
+
+.text_card {
+    margin: 0px !important;
+    padding: 0px !important;
+    font-size: 8px;
+    font-weight: bold;
+    color: #000;
+}
+
+#text_escola {
+    margin-top: 7px !important;
+    margin-left: 94.8px !important;
+}
+
+#text_curso {
+    margin-top: 7.5px !important;
+    margin-left: 94.8px !important;
+}
+
+#text_cpf {
+    margin-top: 9px !important;
+    margin-left: 94.8px !important;
+}
+
+#text_matricula {
+    margin-top: -9px !important;
+    margin-left: 154px !important;
+}
+
+#text_nascimento {
+    margin-top: -9px !important;
+    margin-left: 207px !important;
+}
+
+#text_validade {
+    margin-top: 9px !important;
+    margin-left: 94.8px !important;
+}
+
+#text_codigo {
+    margin-top: -9px !important;
+    margin-left: 145px !important;
+}
+
+#div_logo {
+    height: 36px;
+    width: 140px;
+    margin-left: 8.5px;
+    background-image: url(./images/logo_dne.png);
+    background-position: center;
+    background-size: cover;
+}
+
+#div_logo_unidas {
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    align-self: flex-end;
+    background-image: url(./images/logo_unidas.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.divs_dados {
+    height: 25px;
+    width: 175px;
+    padding-top: 2px;
+}
+
+#div_dados_1 {
+    margin-top: 46px;
+    margin-left: 40px;
+    align-self: center;
+    position: absolute;
+}
+
+#div_dados_2 {
+    height: 25px;
+    width: 175px;
+    margin-top: 71px;
+    margin-left: 40px;
+    align-self: center;
+    position: absolute;
+}
+
+#div_dados_3 {
+    height: 25px;
+    width: 246px;
+    margin-top: 96px;
+    margin-left: 123px;
+    align-self: flex-start;
+    position: absolute;
+}
+
+#div_dados_4 {
+    height: 25px;
+    width: 246px;
+    margin-top: 121px;
+    margin-left: 123px;
+    align-self: flex-start;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#div_dados_5 {
+    height: 25px;
+    width: 246px;
+    margin-top: 146px;
+    margin-left: 123px;
+    align-self: flex-start;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#person_img {
+    height: 117px;
+    width: 103px;
+    max-width: 103px;
+    position: fixed;
+    background-color: white;
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 46px;
+    margin-left: 8.5px;
+}
+
+#person {
+    height: 100%;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+#bottom_card {
+    background-image: url(./images/bottom_carteira_unidas.png);
+    background-position: center;
+    background-size: cover;
+    width: 230px;
+    height: 46px;
+    align-self: flex-end;
+    position: absolute;
+    margin-top: 186px;
+}
+
+#qr_code_icon {
+    background-color: white;
+    width: 65px;
+    height: 65px;
+    margin-top: 140px;
+    margin-left: 27.5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#qr_code {
+    width: 50px;
+    height: 50px;
+}
