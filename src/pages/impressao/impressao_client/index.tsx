@@ -35,15 +35,36 @@ const ImpressaoClient: React.FC<{}> = () => {
   const [codigo, setCodigo] = useState('-');
   // const [hasFile, setHasFile] = useState(false);
   const [file, setFile] = useState('');
+  const [selected, setSelected] = useState(1);
 
   const handleChange = (e: any) => {
     setFile(URL.createObjectURL(e.target.files[0]));
     // setHasFile(true)
   };
 
+  const getStyle = (value: number) => {
+    let retorno = 'btn_select_card btn_non_selected';
+    if (value === selected) {
+      retorno = 'btn_select_card btn_selected';
+    }
+
+    return retorno;
+  };
+
   return (
     <PageContainer>
-      <Row>
+      <div id={'div_menu_options'}>
+        <div id={''} onClick={() => setSelected(1)} className={getStyle(1)}>
+          Carteira Unidas
+        </div>
+        <div id={''} onClick={() => setSelected(2)} className={getStyle(2)}>
+          Carteira CMEIE
+        </div>
+        <div id={''} onClick={() => setSelected(3)} className={getStyle(3)}>
+          Passe Estudantil
+        </div>
+      </div>
+      <Row className={'div_content'}>
         <Col xs={12} sm={12} md={18} lg={12} xl={12}>
           <p className={'input_fields'}>Nome do aluno</p>
           <Input placeholder="Ex:. João Ribeiro" onChange={(e: any) => setName(e.target.value)} />
@@ -63,7 +84,10 @@ const ImpressaoClient: React.FC<{}> = () => {
           />
 
           <p className={'input_fields'}>Matrícula do aluno</p>
-          <Input placeholder="" onChange={(e: any) => setMatricula(e.target.value)} />
+          <Input
+            placeholder="Matrícula do aluno"
+            onChange={(e: any) => setMatricula(e.target.value)}
+          />
 
           <p className={'input_fields'}>Data de nascimento do aluno</p>
           <Input

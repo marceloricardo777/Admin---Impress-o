@@ -1,3 +1,57 @@
+#div_menu_options {
+    height: 32px;
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btn_select_card {
+    height: 30px;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+}
+
+.btn_selected {
+    background-color: #44a5ae;
+    color: white;
+}
+
+.btn_selected:hover {
+    background-color: #44a5ae;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.btn_non_selected {
+    background-color: #1d494e;
+    color: white;
+}
+
+.btn_non_selected:hover {
+    background-color: #4bcfdb;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.div_content {
+    border: 1px solid #44a5ae;
+    border-top: 3px solid #44a5ae;
+    border-radius: 0px 0px 15px 15px;
+    padding: 16px;
+    margin-top: -1px;
+}
+
 .div_card_and_buttons {
     height: 16px;
     width: 75%;
@@ -152,7 +206,7 @@
 #person {
     height: 100%;
     width: 100%;
-    background-color: antiquewhite;
+    background-color: white;
 }
 
 #bottom_card {
