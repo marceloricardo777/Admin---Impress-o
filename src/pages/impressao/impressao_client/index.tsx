@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { PageContainer } from '@ant-design/pro-layout';
 import './style.css';
-import { Col, Input, Row } from 'antd';
+import { Button, Col, Input, Row } from 'antd';
+import { EyeOutlined, SaveOutlined } from '@ant-design/icons';
 
 // const getEscolaridade = (option: string) => {
 //   if (option === 'ensinofundamental') {
@@ -32,49 +33,59 @@ const ImpressaoClient: React.FC<{}> = () => {
   const [nascimento, setNascimento] = useState('-');
   const [validade, setValidade] = useState('-');
   const [codigo, setCodigo] = useState('-');
+  // const [hasFile, setHasFile] = useState(false);
+  const [file, setFile] = useState('');
+
+  const handleChange = (e: any) => {
+    setFile(URL.createObjectURL(e.target.files[0]));
+    // setHasFile(true)
+  };
 
   return (
     <PageContainer>
       <Row>
         <Col xs={12} sm={12} md={18} lg={12} xl={12}>
-          <Input placeholder="Nome do aluno" onChange={(e: any) => setName(e.target.value)} />
+          <p className={'input_fields'}>Nome do aluno</p>
+          <Input placeholder="Ex:. João Ribeiro" onChange={(e: any) => setName(e.target.value)} />
+
+          <p className={'input_fields'}>Instituição do aluno</p>
+          <Input placeholder="Ex:. IFPI" onChange={(e: any) => setInstituicao(e.target.value)} />
+
+          <p className={'input_fields'}>Curso do aluno</p>
+          <Input placeholder="Ex:. Administração" onChange={(e: any) => setCurso(e.target.value)} />
+
+          <p className={'input_fields'}>CPF do aluno</p>
           <Input
-            placeholder="Instituição do aluno"
-            onChange={(e: any) => setInstituicao(e.target.value)}
-          />
-          <Input placeholder="Curso do aluno" onChange={(e: any) => setCurso(e.target.value)} />
-          <Input
-            placeholder="CPF do aluno"
+            placeholder="Ex:. 111.111.111-11"
             maxLength={11}
             max={11}
             onChange={(e: any) => setCPF(e.target.value)}
           />
+
+          <p className={'input_fields'}>Matrícula do aluno</p>
+          <Input placeholder="" onChange={(e: any) => setMatricula(e.target.value)} />
+
+          <p className={'input_fields'}>Data de nascimento do aluno</p>
           <Input
-            placeholder="Matrícula do aluno"
-            onChange={(e: any) => setMatricula(e.target.value)}
-          />
-          <Input
-            placeholder="Data de nascimento do aluno"
+            placeholder="Ex:. 01/01/2020"
             onChange={(e: any) => setNascimento(e.target.value)}
           />
-          <Input
-            placeholder="Validade da carteira"
-            onChange={(e: any) => setValidade(e.target.value)}
-          />
+
+          <p className={'input_fields'}>Validade da carteira</p>
+          <Input placeholder="Ex:. 06/06/2021" onChange={(e: any) => setValidade(e.target.value)} />
+
+          <p className={'input_fields'}>Código de uso</p>
           <Input placeholder="Código de uso" onChange={(e: any) => setCodigo(e.target.value)} />
+
+          <p className={'input_fields'}>Foto do aluno</p>
+          <input type="file" onChange={handleChange} />
         </Col>
         <Col className={'align_center'} xs={6} sm={6} md={6} lg={12} xl={12}>
           <div className={'card_example'}>
             <div id={'div_logo_unidas'} />
             <div id={'div_logo'} />
             <div id={'person_img'}>
-              <img
-                id={'person'}
-                src={
-                  'http://s2.glbimg.com/HOos1Mu3tztptizOaf1ZuE4mMRM=/290x386/s.glbimg.com/jo/g1/f/original/2012/04/13/tereza-fotoruim_300_400.jpg'
-                }
-                alt={''}
-              />
+              <img id={'person'} src={file} alt={''} />
             </div>
             <div id={'div_dados_1'} className={'divs_dados'}>
               <p className={'title_card'}>Nome</p>
@@ -123,6 +134,14 @@ const ImpressaoClient: React.FC<{}> = () => {
                 alt={''}
               />
             </div>
+          </div>
+          <div className={'div_card_and_buttons'}>
+            <Button id={'btn_watch'} icon={<EyeOutlined />}>
+              Ver modelo pronto
+            </Button>
+            <Button id={'btn_download'} type={'primary'} icon={<SaveOutlined />}>
+              Salvar modelo
+            </Button>
           </div>
         </Col>
       </Row>

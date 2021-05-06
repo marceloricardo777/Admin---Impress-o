@@ -39,7 +39,7 @@ const Login: React.FC<LoginProps> = (props) => {
   const intl = useIntl();
   if (isLogged()) {
     console.log(isLogged());
-    history.replace('/solicitacoes/solicitadas');
+    history.replace('/users/');
   }
 
   const handleSubmit = (values: LoginParamsType) => {
@@ -55,7 +55,7 @@ const Login: React.FC<LoginProps> = (props) => {
           localStorage.setItem('name', res.name);
           localStorage.setItem('level', res.level);
           localStorage.setItem('id', res.id);
-          history.replace('/solicitacoes/solicitadas');
+          history.replace('/users/');
         }
         if (res.message !== undefined) {
           message.error(res.message);

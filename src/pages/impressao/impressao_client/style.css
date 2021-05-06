@@ -1,13 +1,24 @@
-.border_black {
-    border: 1px solid black;
+.div_card_and_buttons {
     height: 16px;
+    width: 75%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#btn_watch {
+    margin-right: 8px;
+}
+
+#btn_download {
+    margin-left: 8px;
 }
 
 .align_center {
     display: flex !important;
-    flex-direction: row !important;
+    flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
 }
 
 .title {
@@ -23,6 +34,7 @@
     max-width: 400px;
     height: 250px;
     max-height: 250px;
+    margin-top: 28px;
     padding: 10px 10px 0px 10px;
     background-image: url('./images/fundo_carteira_unidas.png');
     background-position: center;
@@ -47,39 +59,11 @@
     color: #000;
 }
 
-#text_escola {
-    margin-top: 7px !important;
-    margin-left: 94.8px !important;
-}
-
-#text_curso {
-    margin-top: 7.5px !important;
-    margin-left: 94.8px !important;
-}
-
-#text_cpf {
-    margin-top: 9px !important;
-    margin-left: 94.8px !important;
-}
-
-#text_matricula {
-    margin-top: -9px !important;
-    margin-left: 154px !important;
-}
-
-#text_nascimento {
-    margin-top: -9px !important;
-    margin-left: 207px !important;
-}
-
-#text_validade {
-    margin-top: 9px !important;
-    margin-left: 94.8px !important;
-}
-
-#text_codigo {
-    margin-top: -9px !important;
-    margin-left: 145px !important;
+.input_fields {
+    margin: 0px;
+    margin-top: 6px;
+    color: #373435;
+    font-weight: bold;
 }
 
 #div_logo {
@@ -160,11 +144,7 @@
     height: 117px;
     width: 103px;
     max-width: 103px;
-    position: fixed;
-    background-color: white;
-    background-position: left;
-    background-size: cover;
-    background-repeat: no-repeat;
+    position: absolute;
     margin-top: 46px;
     margin-left: 8.5px;
 }
