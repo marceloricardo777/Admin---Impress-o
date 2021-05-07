@@ -59,6 +59,7 @@
         "@types/lodash.debounce": "^4.0.6",
         "@types/lodash.isequal": "^4.5.5",
         "@types/numeral": "^2.0.0",
+        "@types/react-pdf": "^5.0.2",
         "@umijs/route-utils": "^1.0.33",
         "antd": "^4.9.4",
         "antd-masked-input": "^1.0.1",
@@ -83,6 +84,7 @@
         "omit.js": "^2.0.2",
         "package.json": "^2.0.1",
         "prop-types": "^15.5.10",
+        "qrcode.react": "^1.0.1",
         "qs": "^6.9.0",
         "react": "^17.0.0",
         "react-dev-inspector": "^1.1.1",
@@ -91,6 +93,7 @@
         "react-helmet-async": "^1.0.4",
         "react-leaflet": "^3.1.0",
         "react-router": "^4.3.1",
+        "react-to-pdf": "^0.0.13",
         "umi": "^3.2.14",
         "umi-request": "^1.0.8"
     },
