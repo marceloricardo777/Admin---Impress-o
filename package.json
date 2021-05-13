@@ -73,6 +73,7 @@
         "express": "^4.17.1",
         "gg-editor": "^2.0.2",
         "google-map-react": "^2.1.9",
+        "html-to-image": "^1.6.1",
         "leaflet": "^1.7.1",
         "lodash": "^4.17.11",
         "lodash-decorators": "^6.0.0",

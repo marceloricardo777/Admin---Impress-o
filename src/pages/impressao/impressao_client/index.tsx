@@ -5,6 +5,7 @@ import { Button, Col, message, Row } from 'antd';
 import { SaveOutlined, SearchOutlined } from '@ant-design/icons';
 import { getDocumentPicture, getUserByCPF } from './service';
 import MaskedInput from 'antd-masked-input/build/main/lib/MaskedInput';
+import * as htmlToImage from 'html-to-image';
 
 const QRCode = require('qrcode.react');
 
@@ -144,6 +145,16 @@ const ImpressaoClient: React.FC<any> = () => {
       });
   };
 
+  const printImg = () => {
+    const node = document.getElementById('card_unidas') as HTMLImageElement;
+
+    htmlToImage.toPng(node).then((dataUrl) => {
+      const img = new Image();
+      img.src = dataUrl;
+      document.body.appendChild(img);
+    });
+  };
+
   return (
     <PageContainer>
       <div id={'div_menu_options'}>
@@ -178,7 +189,7 @@ const ImpressaoClient: React.FC<any> = () => {
               <div className={'div_card_and_buttons'}>
                 <Button
                   id={'btn_download'}
-                  onClick={async () => getUserByCPF('067.045.973-95')}
+                  onClick={printImg}
                   type={'primary'}
                   icon={<SaveOutlined />}
                 >
