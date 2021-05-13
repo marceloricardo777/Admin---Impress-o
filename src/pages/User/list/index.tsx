@@ -13,12 +13,6 @@ import { queryUsers, updateRule, addRule, removeRule } from './service';
 import { maskForDate, setKeyOnObjects } from '../../../../globals/globalFunctions';
 import { isLogged, isAdmin } from '../../../../globals/globalFunctions';
 
-if (isLogged() === false) {
-  window.location.href = '/user/login';
-} else if (isAdmin() === false) {
-  window.location.href = '/user/login';
-}
-
 const handleAdd = async (fields: UserListItem) => {
   const hide = message.loading('Carregando...');
   try {
@@ -74,16 +68,16 @@ const handleRemove = async (selectedRows: UserListItem[]) => {
 };
 
 const getEscolaridade = (option: string) => {
+  let retorno = 'Pós-Graduação';
   if (option === 'ensinofundamental') {
-    return 'Ensino Fundamental';
+    retorno = 'Ensino Fundamental';
+  } else if (option === 'ensinomedio') {
+    retorno = 'Ensino Médio';
+  } else if (option === 'graduacao') {
+    retorno = 'Graduação';
   }
-  if (option === 'ensinomedio') {
-    return 'Ensino Médio';
-  }
-  if (option === 'graduacao') {
-    return 'Graduação';
-  }
-  return 'Pós-Graduação';
+
+  return retorno;
 };
 
 const capitalizeText = (text: string) => {
@@ -93,7 +87,13 @@ const capitalizeText = (text: string) => {
   return first.toUpperCase() + rest.toLowerCase();
 };
 
-const TableList: React.FC<{}> = () => {
+const TableList: React.FC<any> = () => {
+  if (isLogged() === false) {
+    window.location.href = '/user/login';
+  } else if (isAdmin() === false) {
+    window.location.href = '/user/login';
+  }
+
   const [createModalVisible, handleModalVisible] = useState<boolean>(false);
   const [updateModalVisible, handleUpdateModalVisible] = useState<boolean>(false);
   const [stepFormValues, setStepFormValues] = useState({});
@@ -191,9 +191,16 @@ const TableList: React.FC<{}> = () => {
 
   const updateTable = (page: number) => {
     queryUsers({ currentPage: page }).then((res: any) => {
+      if (res.user === undefined) {
+        localStorage.clear();
+        window.location.href = '/user/login';
+        return true;
+      }
+
       const list = setKeyOnObjects(res.user);
       setUserList(list);
       setPages(res.pages);
+      return false;
     });
   };
 
@@ -202,7 +209,7 @@ const TableList: React.FC<{}> = () => {
       updateTable(pages);
       setFirst(false);
     }
-  });
+  }, [first, pages]);
 
   return (
     <PageContainer>

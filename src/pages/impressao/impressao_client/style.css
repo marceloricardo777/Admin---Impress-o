@@ -7,6 +7,15 @@
     align-items: center;
 }
 
+#div_search_input {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 100%;
+}
+
 .btn_select_card {
     height: 30px;
     width: fit-content;
@@ -54,8 +63,9 @@
 
 .div_card_and_buttons {
     height: 16px;
-    width: 75%;
-    margin-top: 50px;
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 32px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -81,7 +91,7 @@
     font-size: 16px;
 }
 
-.card_example {
+.card_model {
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -90,11 +100,18 @@
     max-height: 250px;
     margin-top: 28px;
     padding: 10px 10px 0px 10px;
-    background-image: url('./images/fundo_carteira_unidas.png');
     background-position: center;
     background-size: cover;
     border-radius: 10px;
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.308);
+}
+
+#card_unidas {
+    background-image: url('./images/fundo_carteira_unidas.png');
+}
+
+#card_cmeie {
+    background-image: url('./images/fundo_carteira_cmeie.png');
 }
 
 .title_card {
@@ -233,6 +250,6 @@
 }
 
 #qr_code {
-    width: 50px;
-    height: 50px;
+    width: 50px !important;
+    height: 50px !important;
 }
