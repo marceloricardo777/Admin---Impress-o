@@ -38,7 +38,8 @@ const ImpressaoClient: React.FC<any> = () => {
   const [nascimento, setNascimento] = useState('');
   const [validade, setValidade] = useState('');
   const [codigo, setCodigo] = useState('');
-  const [file] = useState('');
+  const [file, setFile] = useState('');
+  const [file1, setFile1] = useState('');
   const [selected, setSelected] = useState(1);
   const [hasResponse, setHasResponse] = useState(false);
 
@@ -132,7 +133,8 @@ const ImpressaoClient: React.FC<any> = () => {
           setValidade(`31/03/${new Date().getFullYear() + 1}`);
 
           getDocumentPicture(res.foto).then((res1: any) => {
-            alert(JSON.stringify(res1));
+            setFile(res1.url);
+            alert(res1.url)
           });
 
           setHasResponse(true);
@@ -146,12 +148,16 @@ const ImpressaoClient: React.FC<any> = () => {
   };
 
   const printImg = () => {
-    const node = document.getElementById('card_unidas') as HTMLImageElement;
+    const node = document.getElementById('card_pronto') as HTMLImageElement;
 
     htmlToImage.toPng(node).then((dataUrl) => {
       const img = new Image();
       img.src = dataUrl;
-      document.body.appendChild(img);
+      document.getElementById('img_pronta')!.appendChild(img);
+      var link = document.createElement('a');
+      link.download = 'card.png';
+      link.href = dataUrl;
+      link.click();
     });
   };
 
@@ -186,6 +192,23 @@ const ImpressaoClient: React.FC<any> = () => {
           {hasResponse ? (
             <div>
               {getCard()}
+              <div id="card_pronto">
+                <div id="div_img_card">
+                  <img id={'person'} src={file} alt={''} />
+                </div>
+                <div id="div_qr_code_card">
+                  <QRCode id="qr_code_card" value="https://transmobibeneficios.com.br/" />
+                </div>
+                <p id="p_nome_card">{name}</p>
+                <p id="p_instituicao_card">{instituicao}</p>
+                <p id="p_curso_card">Análise de Sistemas</p>
+                <p id="p_cpf_card">{cpf}</p>
+                <p id="p_matri_card">{matricula}</p>
+                <p id="p_nasc_card">{nascimento}</p>
+                <p id="p_valido_card">{validade}</p>
+                <p id="p_codigo_card">{validade}</p>
+              </div>
+              <div id="img_pronta" />
               <div className={'div_card_and_buttons'}>
                 <Button
                   id={'btn_download'}
@@ -193,7 +216,7 @@ const ImpressaoClient: React.FC<any> = () => {
                   type={'primary'}
                   icon={<SaveOutlined />}
                 >
-                  Salvar modelo
+                  Imprimir modelo
                 </Button>
               </div>
             </div>

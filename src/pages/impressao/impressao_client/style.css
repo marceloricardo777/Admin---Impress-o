@@ -1,3 +1,104 @@
+#card_pronto {
+    width: 8.5cm;
+    height: 5.4cm;
+    border: 1px solid black;
+}
+
+#div_img_card {
+    height: 2.7cm;
+    width: 2.4cm;
+    margin-top: 1.1cm;
+    margin-left: 0.5cm;
+    background-color: white;
+}
+
+#div_qr_code_card {
+    height: 1.1cm;
+    width: 1.4cm;
+    margin-top: 0.1cm;
+    margin-left: 1cm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#qr_code_card {
+    height: 0.95cm !important;
+    width: 0.95cm !important;
+}
+
+#p_nome_card {
+    margin: 0px;
+    margin-top: -3.7cm;
+    margin-left: 3.3cm;
+    font-size: 0.17cm;
+    font-weight: bold;
+    color: black;
+}
+
+#p_instituicao_card {
+    margin: 0px;
+    margin-top: 0.48cm;
+    margin-left: 3.3cm;
+    font-size: 0.17cm;
+    font-weight: bold;
+    color: black;
+}
+
+#p_curso_card {
+    margin: 0px;
+    margin-top: 0.48cm;
+    margin-left: 3.3cm;
+    font-size: 0.17cm;
+    font-weight: bold;
+    color: black;
+}
+
+#p_cpf_card {
+    margin: 0px;
+    margin-top: 0.48cm;
+    margin-left: 3.3cm;
+    font-size: 0.17cm;
+    font-weight: bold;
+    color: black;
+}
+
+#p_nasc_card {
+    margin: 0px;
+    margin-top: -0.25cm;
+    margin-left: 6.4cm;
+    font-size: 0.17cm;
+    font-weight: bold;
+    color: black;
+}
+
+#p_matri_card {
+    margin: 0px;
+    margin-top: -0.25cm;
+    margin-left: 4.7cm;
+    font-size: 0.17cm;
+    font-weight: bold;
+    color: black;
+}
+
+#p_valido_card {
+    margin: 0px;
+    margin-top: 0.40cm;
+    margin-left: 3.3cm;
+    font-size: 0.17cm;
+    font-weight: bold;
+    color: black;
+}
+
+#p_codigo_card {
+    margin: 0px;
+    margin-top: -0.25cm;
+    margin-left: 4.7cm;
+    font-size: 0.17cm;
+    font-weight: bold;
+    color: black;
+}
+
 #div_menu_options {
     height: 32px;
     width: 100%;
