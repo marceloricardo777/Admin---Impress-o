@@ -7,30 +7,30 @@
 #div_img_card {
     height: 2.7cm;
     width: 2.4cm;
-    margin-top: 1cm;
-    margin-left: 0.5cm;
+    margin-top: 0.98cm;
+    margin-left: 0.4cm;
     background-color: white;
 }
 
 #div_qr_code_card {
-    height: 1.1cm;
+    height: 1.2cm;
     width: 1.4cm;
-    margin-top: 0.1cm;
-    margin-left: 1cm;
+    margin-top: 0.05cm;
+    margin-left: 0.8cm;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 #qr_code_card {
-    height: 0.95cm !important;
-    width: 0.95cm !important;
+    height: 1.1cm !important;
+    width: 1.1cm !important;
 }
 
 #p_nome_card {
     margin: 0px;
-    margin-top: -3.9cm;
-    margin-left: 3.3cm;
+    margin-top: -4cm;
+    margin-left: 3.2cm;
     font-size: 0.17cm;
     font-weight: bold;
     color: black;
@@ -38,8 +38,8 @@
 
 #p_instituicao_card {
     margin: 0px;
-    margin-top: 0.48cm;
-    margin-left: 3.3cm;
+    margin-top: 0.49cm;
+    margin-left: 3.2cm;
     font-size: 0.17cm;
     font-weight: bold;
     color: black;
@@ -47,8 +47,8 @@
 
 #p_curso_card {
     margin: 0px;
-    margin-top: 0.48cm;
-    margin-left: 3.3cm;
+    margin-top: 0.4cm;
+    margin-left: 3.2cm;
     font-size: 0.17cm;
     font-weight: bold;
     color: black;
@@ -56,8 +56,8 @@
 
 #p_cpf_card {
     margin: 0px;
-    margin-top: 0.48cm;
-    margin-left: 3.3cm;
+    margin-top: 0.4cm;
+    margin-left: 3.2cm;
     font-size: 0.17cm;
     font-weight: bold;
     color: black;
@@ -66,7 +66,7 @@
 #p_nasc_card {
     margin: 0px;
     margin-top: -0.25cm;
-    margin-left: 6.4cm;
+    margin-left: 6cm;
     font-size: 0.17cm;
     font-weight: bold;
     color: black;
@@ -75,7 +75,7 @@
 #p_matri_card {
     margin: 0px;
     margin-top: -0.25cm;
-    margin-left: 4.7cm;
+    margin-left: 4.3cm;
     font-size: 0.17cm;
     font-weight: bold;
     color: black;
@@ -83,8 +83,8 @@
 
 #p_valido_card {
     margin: 0px;
-    margin-top: 0.40cm;
-    margin-left: 3.3cm;
+    margin-top: 0.8cm;
+    margin-left: 3.2cm;
     font-size: 0.17cm;
     font-weight: bold;
     color: black;
@@ -93,7 +93,7 @@
 #p_codigo_card {
     margin: 0px;
     margin-top: -0.25cm;
-    margin-left: 4.7cm;
+    margin-left: 4.3cm;
     font-size: 0.17cm;
     font-weight: bold;
     color: black;
